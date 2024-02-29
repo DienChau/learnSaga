@@ -1,3 +1,23 @@
+# Mini Project - Student Management
+
+/login
+/admin: layout
+
+/admin/\*
+
+feature: /admin/dashboard
+feature: /admin/students
+
+auth/ authentication
+
+- login
+- sign up / register
+- forgot password
+
+# Reference
+
+This is the reference for this project: https://github.dev/paulnguyen-mn/learn-rtk-saga
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
