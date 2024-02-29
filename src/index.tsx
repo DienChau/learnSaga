@@ -6,7 +6,6 @@ import App from "./App";
 import { store } from "./app/store";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { CssBaseline } from "@mui/material";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -15,7 +14,6 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <CssBaseline />
         <App />
       </BrowserRouter>
     </Provider>
