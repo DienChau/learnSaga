@@ -3,25 +3,29 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { store } from "./app/store";
+import { store, persistor } from "./app/store";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
-import { history } from "utils";
+import { PersistGate } from "redux-persist/integration/react";
+// import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+// import { history } from "utils";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      {/* <HistoryRouter history={history}>
+    <PersistGate persistor={persistor}>
+      <Provider store={store}>
+        {/* <HistoryRouter history={history}>
         <App />
       </HistoryRouter> */}
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </PersistGate>
   </React.StrictMode>,
 );
 

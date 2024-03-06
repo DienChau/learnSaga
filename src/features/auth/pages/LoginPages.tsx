@@ -23,11 +23,13 @@ export default function LoginPage() {
   const loggedIn = useAppSelector(selectIsLoggedIn);
   const logging = useAppSelector(selectIsLogging);
 
+  // const accessToken = localStorage.getItem("access_token");
+
   useEffect(() => {
     if (loggedIn) {
-      navigate("/admin");
+      navigate("/admin/dashboard");
     }
-  }, [loggedIn]);
+  }, [loggedIn, navigate]);
 
   console.log({ loggedIn });
   return (
