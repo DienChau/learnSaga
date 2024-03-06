@@ -6,6 +6,8 @@ import App from "./App";
 import { store } from "./app/store";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+import { history } from "utils";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -13,6 +15,9 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      {/* <HistoryRouter history={history}>
+        <App />
+      </HistoryRouter> */}
       <BrowserRouter>
         <App />
       </BrowserRouter>
