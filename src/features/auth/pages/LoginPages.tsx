@@ -23,6 +23,8 @@ export default function LoginPage() {
   const loggedIn = useAppSelector(selectIsLoggedIn);
   const logging = useAppSelector(selectIsLogging);
 
+  // console.log(loggedIn);
+
   // const accessToken = localStorage.getItem("access_token");
 
   useEffect(() => {

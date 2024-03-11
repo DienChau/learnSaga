@@ -5,12 +5,14 @@ import counterReducer from "../features/counter/counterSlice";
 import rootSaga from "./rootSaga";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
+import dashboardReducer from "features/dashboard/DashboardSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 
 const rootReducer = combineReducers({
   counter: counterReducer,
   auth: authReducer,
+  dashboard: dashboardReducer,
 });
 
 const persistConfig = {
